@@ -6,6 +6,7 @@ release:
 
 build:
 	ng build --outputPath=dist
+	docker build -t gardenova/gardenova.hu:latest .
 
 dev:
 	ng serve
