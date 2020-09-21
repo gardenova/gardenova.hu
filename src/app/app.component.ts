@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gardenova';
+  public constructor(private titleService: Title) {
+    titleService.setTitle(this.title);
+  }
+
+  title = 'Gardenova - Mindenünk a gyümölcs';
   apples: Apple[] = [
     new Apple("Red Chief Delicious (Jeromine)", "redchief.jpg"),
     new Apple("Golden Reinders", "golden.jpg"),
