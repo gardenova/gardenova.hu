@@ -16,6 +16,6 @@ docker_push:
 	docker push gardenova/gardenova.hu:latest
 
 dev:
-	ng serve
+	ng serve --port 4400
 
 serve: dev
