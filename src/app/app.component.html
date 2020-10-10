@@ -19,7 +19,7 @@
         <img class="" width="350" height="*" src="assets/logocolored.png">
         <h1 class="title">Gardenova Kft.</h1>
         <p class="subtitle">Mindenünk a gyümölcs</p>
-        <video controls [attr.autoplay]="true">
+        <video #video (canplay)="video.play()" (loadedmetadata)="video.muted = true" controls>
           <source src="https://gardenova.hu/static/video/campaign_2020_10/klipp.webm"
             type="video/webm; codecs=vp9,vorbis">
           <source src="https://gardenova.hu/static/video/campaign_2020_10/klipp_vp8.webm" type="video/webm">
